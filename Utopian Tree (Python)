@@ -1,0 +1,18 @@
+import sys
+    
+testcases = int(sys.stdin.read(1))
+buffer1 = sys.stdin.read(1)
+
+for testcase in range(0,testcases):
+    #print("testcase: ",testcase)
+    cycles = int(sys.stdin.read(1))
+    buffer2 = sys.stdin.read(1)
+    #print("cycle num: ",cycles)
+    height = 1
+    for cycle in range (0,cycles):
+        cycle = cycle+1
+        if cycle%2 != 0:
+            height = height*2
+        if cycle%2 == 0:
+            height = height+1
+    print(height)    
