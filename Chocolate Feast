@@ -1,0 +1,19 @@
+import math
+
+T = int(input())
+
+for i in range(T):
+
+    N,C,M = str(input()).split()
+    answer = 0
+    # Compute Answer
+    N = int(N)
+    C = int(C)
+    M = int(M)
+    answer = int(N/C)
+    if(answer >= M):
+        addition = math.floor(answer/M)
+        answer += addition
+        if(answer%M + addition + 1 >= M):
+            answer += 1
+    print(answer)
