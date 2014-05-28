@@ -11,9 +11,8 @@ for i in range(T):
     C = int(C)
     M = int(M)
     answer = int(N/C)
-    if(answer >= M):
-        addition = math.floor(answer/M)
-        answer += addition
-        if(answer%M + addition + 1 >= M):
-            answer += 1
+    wrappers = answer
+    while(wrappers >= M):
+        answer += math.floor(wrappers/M)
+        wrappers = math.floor(wrappers/M) + wrappers%M
     print(answer)
