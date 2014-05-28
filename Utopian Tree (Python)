@@ -8,6 +8,6 @@ for testcase in range(testcases):
     for cycle in range (cycles):
         if cycle%2 == 0:
             height *= 2
-        if cycle%2 != 0:
+        else:
             height += 1
     print(height)    
